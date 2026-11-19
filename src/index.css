@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F5F2E9;
+  --color-paper-dark: #EAE6DC;
+  --color-ink: #171717;
+  --color-accent: #2F5BFF;
+  --color-accent-tint: #E9EEFF;
+  --color-muted: #666666;
+  --color-line: #D8D5CD;
+  --color-approved: #16A34A;
+  --color-held: #F59E0B;
+  --color-blocked: #DC2626;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --shadow-hard: 5px 5px 0 #171717;
+  --shadow-hard-sm: 2px 2px 0 #171717;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@utility card-lift {
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 #171717;
+  }
+}
+
+@theme {
+  --animate-marquee: marquee 30s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
